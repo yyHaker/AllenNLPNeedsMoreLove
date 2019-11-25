@@ -18,7 +18,7 @@ from models import *
 from allennlp.commands.train import train_model
 from allennlp.common.params import Params
 
-params = Params.from_file("config_file/bert_qa.jsonet")
+params = Params.from_file("config_file/snli_bert.jsonnet")
 serialization_dir = tempfile.mkdtemp()
-model = train_model(params, serialization_dir, force=True, cache_directory="temp/squad/bert")
+model = train_model(params, serialization_dir, force=True, cache_directory="temp/snli/bert")
 

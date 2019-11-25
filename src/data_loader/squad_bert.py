@@ -248,7 +248,7 @@ class SquadReaderBert(DatasetReader):
         fileds["question"] = TextField(question_tokens, self._token_indexers)
         fileds["passage"] = TextField(passage_tokens, self._token_indexers)
         context_filed = TextField(context_tokens, self._token_indexers)
-        fileds["context"] = context_tokens
+        fileds["context"] = context_filed
         metadata = {
             'question_tokens': [token.text for token in question_tokens],
             'passage_tokens': [token.text for token in passage_tokens],
